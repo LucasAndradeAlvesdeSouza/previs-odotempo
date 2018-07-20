@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Previsão</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+</head>
+<body>
+    <h1>Previsão</h1>
+    <div class="city-search">
+      <div class="search-container">
+        <form action="#">
+            <input type="text" id="city" placeholder="escolha uma cidade">
+            <input type="submit" id="search" value="Pesquisar">
+        </form>
+      </div>
+    </div>
+    <div class="flag-switch" data-first-lang="C" data-second-lang="F">
+      <input type="checkbox" id="unit-toggle" checked>
+      <label for="unit-toggle"></label>
+    </div>
+    <div class="card">
+        <div class="loader-container">
+            <div id="load-icon" class="loader" title="1">
+              <svg version="1.1" id="loader-1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                 width="200px" height="200px" viewBox="0 0 50 50" style="enable-background:new 0 0 50 50;" xml:space="preserve">
+              <path fill="#000" d="M25.251,6.461c-10.318,0-18.683,8.365-18.683,18.683h4.068c0-8.071,6.543-14.615,14.615-14.615V6.461z">
+                <animateTransform attributeType="xml"
+                  attributeName="transform"
+                  type="rotate"
+                  from="0 25 25"
+                  to="360 25 25"
+                  dur="1.0s"
+                  repeatCount="indefinite"/>
+                </path>
+              </svg>
+            </div>
+        </div>
+        <div id="forecast">
+            <h2 id="city-name">Recife</h2>
+            <div class="today">
+                <div class="icon-container">
+                    <img id="weather-icon">
+                    <div class="temperature">
+                      <span id="current-temperature"></span>
+                      <span id="unit"></span>
+                    </div>
+                </div>
+                <div class="info-container">
+                    <div>
+                      <span><b>Tempo: </b></span>
+                      <span id="current-weather"></span>
+                    </div>
+                    <div>
+                      <span><b>Vento: </b></span>
+                      <span id="current-wind"></span>
+                      <a><span>km/h</span></a>
+                    </div>
+                    <div>
+                        <span><b>Umidade: </b></span>
+                        <span id="current-humidity"></span>
+                        <span>%</span>
+                    </div>
+                </div>
+            </div>
+            <div id="next-days" class="next-days">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
